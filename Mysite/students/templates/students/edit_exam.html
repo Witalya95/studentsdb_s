@@ -1,0 +1,21 @@
+{% extends "students/base.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+
+
+{% block header %}
+<h2>Edit Exam</h2>
+{% endblock header %}
+
+
+{% block content %}
+
+    <form action="{% url 'students:edit_exam' exam.id%}" method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+        <button type="submit" name="save_button" class="btn btn-primary">{% trans "Save" %}</button> <button type="submit" name="cancel_button" class="btn btn-primary">{% trans "Cancel" %}</button>
+        {% endbuttons %}
+    </form>
+
+{% endblock content %}

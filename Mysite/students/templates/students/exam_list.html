@@ -1,0 +1,47 @@
+{% extends 'students/base.html' %}
+{% load i18n %}
+
+{% load static from staticfiles %}
+
+{% block content %}
+
+<a href="{% url 'students:add_exam' %}" class="btn btn-primary">{% trans "Add Exam" %}</a>
+
+<table class="table">
+	 <thead>
+		<tr>
+			<td>#</td>
+			<td>{% trans "Subject" %}</td>
+			<td>{% trans "Data" %}</td>
+            <td>{% trans "Teacher" %}</td>
+		</tr>
+	 </thead>
+	<tbody>
+	{% for exam in exams %}
+	<tr>
+		<td>{{ forloop.counter }}</td>
+		<td><a href="{% url 'students:edit_exam' exam.id %}">{{ exam.title }}</td>
+		<td>{{ exam.data }}</td>
+        <td>{{ exam.ticher_name }}</td>
+        <td>{{ exam.exam_group }}</td>
+		<td>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle"
+                  data-toggle="dropdown">Дія
+            <span class="caret"></span>
+          </button>
+			<ul class="dropdown-menu" role="menu">
+           	 	<li><a href="{% url 'students:edit_exam' exam.id %}">Редагувати</a></li>
+				<li><a href="{% url 'students:edit_exam' exam.id %}">Відвідування</a></li>
+            	<li><a href="{% url 'students:delete_exam' exam.id %}">Видалити</a></li>
+          	</ul>
+
+        </div>
+      </td>
+	</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+
+{% endblock content %}

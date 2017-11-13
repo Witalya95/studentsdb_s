@@ -1,0 +1,68 @@
+{% extends 'students/base.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+
+{% if not students %}
+<div class="alert allert-warning">
+    Поки немає жодного студента в базі. Будь-ласка,
+    <a href="{% url 'students:add_student' %}">додайте</a> першого.
+</div>
+{% else %}
+
+<p id="journal-nav" class="text-center">
+    <a href="?month={{ prev_manth }}"
+       title="Попередній Місяць">&larr;</a>
+
+    <!-- translate month name -->
+    <strong>{{month_verbose}} {{ year }}</strong>
+    <a href="?month={{ next_month }}"
+       title="Наступний Місяць">&rarr;</a>
+</p>
+
+<table class="table table-hover table-striped table-bordered" id="students-journal">
+
+    <thead>
+    <tr class="header">
+        <th class="num">#</th>
+        <th class="name">Студент</th>
+        {% for day in month_heder %}
+        <th class="day-header">
+            {{day.verbose}}
+            <br />
+            {{ day.day }}
+        </th>
+        {% endfor %}
+    </tr>
+    </thead>
+
+    <tbody>
+
+    {% csrf_token %}
+
+    {% for student in students %}
+    <tr>
+
+        <td>
+            {{ forloop.counter }}
+        </td>
+
+        <td>
+            <a title="Редагувати" target="_blank" href="{% url 'students:add_student' %}">
+                {{ student.fullname }}
+            </a>
+        </td>
+
+        {% for day in student.days %}
+        <td class="day-box">
+            <input type="checkbox" data-student-id="{{ student.id }}"
+            data-date="{{ day.date }}" data-url="{{student.update_url}}"
+            value="1"{% if day.present %} checked="checked" {% endif %}>
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock content %}

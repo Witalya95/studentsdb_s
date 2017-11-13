@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-10 21:23+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: .\models.py:10 .\models.py:110
+msgid "Student"
+msgstr "Студент"
+
+#: .\models.py:11 .\templates\students\base.html:54
+msgid "Students"
+msgstr "Студенти"
+
+#: .\models.py:15 .\templates\students\student_list.html:28
+msgid "First Name"
+msgstr "Ім'я"
+
+#: .\models.py:19 .\templates\students\student_list.html:20
+msgid "Last Name"
+msgstr "Прізвище"
+
+#: .\models.py:27 .\models.py:54 .\models.py:96
+msgid "Group"
+msgstr "Група:"
+
+#: .\models.py:33
+msgid "Birthday"
+msgstr "День народження"
+
+#: .\models.py:37 .\templates\students\student_list.html:17
+msgid "Photo"
+msgstr "Фото"
+
+#: .\models.py:42
+#, fuzzy
+#| msgid "Ticket #"
+msgid "Ticket"
+msgstr "№ Білету"
+
+#: .\models.py:45 .\models.py:68
+msgid "Additional notes"
+msgstr "Додаткові нотатки"
+
+#: .\models.py:55 .\templates\students\base.html:55
+msgid "Groups"
+msgstr "Групи"
+
+#: .\models.py:59
+msgid "Name"
+msgstr "Назва"
+
+#: .\models.py:62 .\templates\students\group_list.html:25
+msgid "Leader"
+msgstr "Староста"
+
+#: .\models.py:80
+msgid "Exam"
+msgstr "Іспит"
+
+#: .\models.py:81 .\templates\students\base.html:56
+msgid "Exams"
+msgstr "Іспити"
+
+#: .\models.py:85 .\templates\students\exam_list.html:14
+msgid "Subject"
+msgstr "Предмет"
+
+#: .\models.py:88 .\models.py:116 .\templates\students\exam_list.html:15
+msgid "Data"
+msgstr "Дата і Час"
+
+#: .\models.py:93 .\templates\students\exam_list.html:16
+msgid "Teacher"
+msgstr "Викладач"
+
+#: .\models.py:106
+msgid "Monthly Magazine"
+msgstr "Місячний Журнал"
+
+#: .\models.py:107
+msgid "Monthlys Magazine"
+msgstr "Місячні Журнали"
+
+#: .\templates\students\add_exam.html:9 .\templates\students\add_group.html:9
+#: .\templates\students\add_student.html:9
+#: .\templates\students\edit_exam.html:9
+#: .\templates\students\edit_group.html:9
+#: .\templates\students\edit_student.html:9
+msgid "Save"
+msgstr "Зберегти"
+
+#: .\templates\students\add_exam.html:9
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: .\templates\students\base.html:8 .\templates\students\base.html:26
+#: .\templates\students\base.html:84
+msgid "Students Accounting Service"
+msgstr "Сервіс Обліку Студентів"
+
+#: .\templates\students\base.html:30
+msgid "Group:"
+msgstr "Групи:"
+
+#: .\templates\students\base.html:39
+msgid "Logout"
+msgstr "Вийти"
+
+#: .\templates\students\base.html:43
+msgid "Login"
+msgstr "Вхід"
+
+#: .\templates\students\base.html:44
+msgid "Register"
+msgstr "Реєстрація"
+
+#: .\templates\students\exam_list.html:8
+msgid "Add Exam"
+msgstr "Додати Іспит"
+
+#: .\templates\students\group_list.html:8
+msgid "Add Groups"
+msgstr "Додати Групу"
+
+#: .\templates\students\student_list.html:9
+msgid "Add Student"
+msgstr "Додати Студента"
+
+#: .\templates\students\student_list.html:35
+msgid "Ticket #"
+msgstr "№ Білету"
+
+#: .\templates\students\student_list.html:40
+msgid "Actions"
+msgstr "Дії"
+
+#, fuzzy
+#~| msgid "Add Groups"
+#~ msgid "Add Group"
+#~ msgstr "Додати Групу"

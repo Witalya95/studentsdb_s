@@ -1,0 +1,9 @@
+
+
+<p>
+	 <a href="{% url 'students:index' %}">Learning Log</a>
+	 <a href="{% url 'students:student_list' %}?order_by=last_name">Список студентів </a>
+	 <a href="{% url 'students:group_list' %}">Список груп </a>
+	<a href="{% url 'students:exam_list' %}">Список іспитів </a>
+</p>
+{% block content %}{% endblock content %}
