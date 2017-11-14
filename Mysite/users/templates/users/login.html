@@ -1,0 +1,18 @@
+{% extends 'students/base.html' %}
+{% load i18n %}
+
+
+
+{% block content  %}
+
+ <form method="post" action="{% url 'users:login' %}" class="form">
+		{% csrf_token %}
+		{{ form.as_p }}
+
+	 <button name="submit" class="btn btn-primary">{% trans "Log in" %} </button>
+
+	 <input type="hidden" name="next" value="{% url 'students:student_list' %}"/>
+
+	</form>
+{% endblock content %}
+
